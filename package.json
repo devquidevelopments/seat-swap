@@ -1,0 +1,22 @@
+{
+  "name": "seat-swap",
+  "version": "1.0.0",
+  "description": "Seat swapping app for commercial flights.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devquidevelopments/seat-swap.git"
+  },
+  "author": "Devqui Developments",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devquidevelopments/seat-swap/issues"
+  },
+  "homepage": "https://github.com/devquidevelopments/seat-swap#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
