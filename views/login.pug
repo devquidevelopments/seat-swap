@@ -2,7 +2,8 @@ extends layout
 
 block head 
     title login
-    link(rel='stylesheet', href='/stylesheets/login.css')
+    link(rel='stylesheet' href='/stylesheets/login.css')
+    script(src='https://accounts.google.com/gsi/client' async)
 
 block navitems
 
@@ -18,6 +19,9 @@ block content
             p1 or login with:
             hr#right
         .social
-            hr#social
+            #g_id_onload(data-client_id="seat-swap-394314" data-context="signup" data-ux_mode="popup"
+            data-login_uri="www.seatswap.com/login" data-nonce="" data-auto_select="true" data-itp_support="true")
+            .g_id_signin(data-type="icon" data-shape="circle" data-theme="outline" data-text="signin_with"
+            data-size="large")
         .alt
             p2 Don’t have an account? Register here or continue as guest
