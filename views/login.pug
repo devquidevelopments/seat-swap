@@ -1,0 +1,23 @@
+extends layout
+
+block head 
+    title login
+    link(rel='stylesheet', href='/stylesheets/login.css')
+
+block navitems
+
+block content
+    .login-form
+        p Username or email
+        input#user
+        p Password 
+        input#password
+        button.login-button(type="submit") Login
+        .split
+            hr#left
+            p1 or login with:
+            hr#right
+        .social
+            hr#social
+        .alt
+            p2 Don’t have an account? Register here or continue as guest

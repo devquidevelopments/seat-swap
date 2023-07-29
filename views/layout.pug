@@ -1,7 +1,13 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    block head
+    ol#navbar
+      li
+        a(href='/') Logo here
+      block navitems
   body
-    block content
+    .main
+      block content
