@@ -1,0 +1,57 @@
+html {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    height: 100%;
+    background-image: url(/images/landingPlane.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main {
+    height: 31.667%;
+}
+
+#margin_top {
+    height: 31.667%;
+}
+
+#search_box {
+    height: 100%;
+    background-color: white;
+    margin: 0;
+    border-radius: 5em;
+}
+
+#search_box_header_container {
+    height: 25%;
+}
+
+#search_box h1 {
+    font-size: larger;
+}
+
+#search_form_main {
+    margin-left: 0;
+}
+
+#search_form input{
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    #search_box_header_container {
+        margin: 3% 7% 0 7%;
+    }
+
+    #search_box_main {
+        margin: 0 7% 0 7%;
+    }
+
+    .margin {
+        display: none;
+    }
+}

@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        link(rel='stylesheet' href='/stylesheets/template.css')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        block head
+    body
+        div(class="section group" id="header")
+            div(class="col span_3_of_8")
+                a#logo(href='/') My Seat Swap
+            div(class="col span_1_of_8 nav_buttons")
+                block navitems
+        block content

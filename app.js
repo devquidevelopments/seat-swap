@@ -3,15 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var gauth = require('google-auth-library');
-var passport = require('passport');
-
-require('dotenv').config();
+var amadeus = require('amadeus');
 
 // Modules
 var indexRouter = require('./routes/index');
+var templateRouter = require('./routes/template')
 var loginRouter = require('./routes/login');
+var resultsRouter = require('./routes/results');
 var usersRouter = require('./routes/users');
+var registerRouter = require('./routes/register');
+var flightRouter = require('./routes/flight');
 
 var app = express();
 
@@ -26,8 +27,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/template', templateRouter)
+app.use('/results', resultsRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
+app.use('/register', registerRouter);
+app.use('/flight', flightRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

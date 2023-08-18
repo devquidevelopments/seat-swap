@@ -15,6 +15,10 @@ p2 {
     font-size: 0.9em;
 }
 
+.main {
+    background-color: #f6f6f6;
+}
+
 .login-form {
     background-color: white;
     padding: 6em 1em;

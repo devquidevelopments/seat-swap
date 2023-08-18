@@ -1,7 +1,7 @@
 extends layout
 
 block head 
-    title Login
+    title Register
     link(rel='stylesheet' href='/stylesheets/login.css')
     //- script(src='https://accounts.google.com/gsi/client' async)
 
@@ -25,4 +25,4 @@ block content
             //- .g_id_signin(data-type="icon" data-shape="circle" data-theme="outline" data-text="signin_with"
             //- data-size="large")
         .alt
-            p2 Don't have an account? Register #[a(href='/register') here] or #[a(href='/') continue as guest]
+            p2 Already have an account? Login #[a(href='/login') here] or #[a(href='/') continue as guest]

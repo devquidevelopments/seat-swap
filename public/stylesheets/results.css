@@ -1,0 +1,74 @@
+h1 {
+    font-size: medium;
+}
+
+.center,
+.vert {
+    height: 100%;
+    margin: 0;
+    justify-items: center;
+}
+
+.vert {
+    margin: 0;
+}
+
+.vert p {
+    margin: 0;
+}
+
+.span_2_of_8 input {
+    width: 100%;
+}
+
+.input {
+    margin-right: 5%;
+}
+
+.seatmap_container {
+    display: flex;
+    justify-content: center;
+}
+
+.seatmap {
+    width: 24em;
+    height: 24em;
+    overflow-y: scroll;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.seat {
+    background-color: black;
+    width: 3em;
+    height: 3em;
+}
+
+.gap {
+    height: 3em;
+    width: 6em;
+}
+
+#search_button {
+    float: right;
+}
+
+#left {
+    border-bottom: thin solid black;
+    width: 100%;
+}
+
+#right {
+    align-self: end;
+    border-bottom: thin solid black;
+    width: 100%;
+}
+
+#seat_submit {
+    float: right;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+}
