@@ -1,3 +1,10 @@
+function showSeatMap() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("flight_details_main").style.visibility = "visible"
+    document.getElementById("seatmap_container").style.display = "flex";
+    document.getElementById("seatmap_container").style.backgroundColor = "white";
+}
+
 document.addEventListener("DOMContentLoaded", function (e) {
     const selections = [];
     const inputElems = document.getElementsByTagName("input");
@@ -33,4 +40,3 @@ document.addEventListener("DOMContentLoaded", function (e) {
         hiddenSeatElem.value = selections;
     }
 })
-
