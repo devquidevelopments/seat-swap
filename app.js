@@ -16,7 +16,6 @@ var indexRouter = require('./routes/index');
 var templateRouter = require('./routes/template')
 var loginRouter = require('./routes/login');
 var resultsRouter = require('./routes/results');
-var usersRouter = require('./routes/users');
 var registerRouter = require('./routes/register');
 var seatsRouter = require('./routes/seats');
 var messageRouter = require('./routes/message');
@@ -36,7 +35,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/template', templateRouter)
 app.use('/results', resultsRouter);
-app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/seats', seatsRouter);
