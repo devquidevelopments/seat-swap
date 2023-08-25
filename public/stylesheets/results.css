@@ -1,45 +1,3 @@
-body {
-    height: 100%;
-    /* background-image: url(/images/landingPlane.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-}
-
-h1 {
-    font-size: medium;
-}
-
-.inputs {
-    margin-top: 0.75em;
-}
-
-.input {
-    margin-right: 5%;
-}
-
-.right {
-    float: right;
-}
-
-.center,
-.vert {
-    height: 100%;
-    margin: 0;
-}
-
-.vert {
-    margin: 0;
-}
-
-.vert p,
-.center p {
-    margin: 0;
-    align-self: center;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-}
-
 .row {
     display: flex;
     flex-direction: row;
@@ -67,30 +25,6 @@ h1 {
 .gap {
     height: 3em;
     width: 6em;
-}
-
-#search_flight_container {
-    background-color: white;
-    height: 7.5em;
-}
-
-#search_button {
-    float: right;
-}
-
-#flight_details_container {
-    visibility: hidden;
-}
-
-#flight_details_main {
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-    height: 3.55em;
-}
-
-#line {
-    height: 1px;
-    background-color: black;
 }
 
 #content_container {
@@ -146,23 +80,6 @@ h1 {
 
 @media only screen and (max-width: 900px) {
 
-    .span_4_of_8 {
-        width: 100%;
-    }
-
-    #search_form_container {
-        display: none;
-    }
-
-    #search_form_container,
-    #flight_details_container {
-        margin-top: 0.5em;
-    }
-
-    #content_container {
-        height: calc(100% - 8em);
-    }
-
     #popup_container {
         justify-content: start;
         align-items: center;
@@ -183,22 +100,6 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
-
-    .input {
-        float: none;
-    }
-
-    .right {
-        margin: 0;
-    }
-
-    #flight_details_main>* {
-        width: 4em;
-    }
-
-    #image_container {
-        width: 6em;
-    }
 
     #popup {
         width: 90%;
