@@ -8,66 +8,95 @@ block navitems
     a(href="/login") Login/Register
 
 block content
-    div(class="section group")
-        div(class="col span_4_of_8")
-            div(class="section group" id="search_box_container")
-                div(class="col span_8_of_8" id="search_form_main")
-                    form(id="search_form" action="/results" method="get")
-                        div(class="section group inputs" id="input1")
-                            div(class="col span_2_of_8")
-                                label Airline
-                            div(class="col span_2_of_8 input")
-                                input(list="airlines" id="airline" name="airline" placeholder="Select airline" autocomplete="off")
-                                datalist(id="airlines")
-                                    option(value="FR Ryanair")
-                                    option(value="TP TAP Portugal")
-                            div(class="col span_1_of_8")
-                                label Date
-                            div(class="col span_2_of_8 input")
-                                input#date(type="date" name="date" value=`${date}` min=`${date}`)
-                        div(class="section group inputs" id="input2")
-                            div(class="col span_2_of_8")
-                                label Flight number
-                            div(class="col span_2_of_8 input")
-                                input#number(type="text" name="fNumber" autocomplete="off")
-                            div(class="col span_2_of_8")
-                            div(class="col span_1_of_8")
-                                input#search_button(type="submit" value="Search")
-        div(class="col span_4_of_8")
-            div(class="section group" id="flight_header")
-                h1 Your flight details:
-            div(class="section group" id="flight_details")
-                div(class="col span_1_of_8 center")
+    div(class="section group" id="search_flight_container")
+        div(class="col span_4_of_8" id="search_form_container")
+            h1 Search for different flight
+            form(id="search_form" action="/results" method="get")
+                div(class="section group inputs" id="input1")
+                    div(class="col span_2_of_8")
+                        label Airline
+                    div(class="col span_2_of_8 input")
+                        input(list="airlines" id="airline" name="airline" placeholder="Select airline" autocomplete="off")
+                        datalist(id="airlines")
+                            option(value="FR Ryanair")
+                            option(value="TP TAP Portugal")
+                    div(class="col span_1_of_8")
+                        label Date
+                    div(class="col span_2_of_8 input right")
+                        input#date(type="date" name="date" value=`${date}` min=`${date}`)
+                div(class="section group inputs" id="input2")
+                    div(class="col span_2_of_8")
+                        label Flight number
+                    div(class="col span_2_of_8 input")
+                        input#number(type="text" name="fNumber" autocomplete="off")
+                    div(class="col span_2_of_8 input right")
+                        input#search_button(type="submit" value="Search")
+        div(class="col span_4_of_8" id="flight_details_container")
+            h1 Your flight details
+            div(class="section group" id="flight_details_main")
+                div(class="col span_1_of_8 center" id="image_container")
                     p#image= flight.airline
-                div(class="col span_1_of_8 vert")
+                div(class="col span_1_of_8 vert" id="dep_container")
                     p#depT= flight.departureTime
-                    p#depAP= flight.departureAirport
-                div(class="col span_2_of_8")
-                    #left
-                div(class="col span_1_of_8")
+                    p#depAP= flight.departureAirportCode
+                div(class="col span_2_of_8 center line")
+                    #line
+                div(class="col span_1_of_8 center" id="fn_container")
                     p#fNumber= flight.flightNumber
-                div(class="col span_2_of_8")
-                    #right
-                div(class="col span_1_of_8 vert")
+                div(class="col span_2_of_8 center line")
+                    #line
+                div(class="col span_1_of_8 vert" id="arr_container")
                     p#arrT= flight.arrivalTime
-                    p#arrAP= flight.arrivalAirport
-    div(class="section group")
-        div(class="col span_8_of_8")
-    div(class="section group")
-        div(class="col span_8_of_8 seatmap_container")
-            form(id="seat_selector" action="/seats" method="get") 
-                div(class="seatmap")
+                    p#arrAP= flight.arrivalAirportCode
+    div(class="section group" id="content_container")
+        div(class="col span_4_of_8" id="popup_container")
+            div(class="section group" id="popup")
+                h1 Please confirm your flight details:
+                h2= flight.flightNumber + " " + flight.departureCity + " - " + flight.arrivalCity
+                div(class="section group" id="popup_dep")
+                    div(class="col span_2_of_8" id="dep_left")
+                        p Departure
+                    div(class="col span_6_of_8" id="dep_right")
+                        p= flight.departureDate + ", " + flight.departureTime
+                        p= flight.departureCity + " - " + flight.departureAirport + ", " + flight.departureCountry
+                div(class="section group" id="popup_arr")
+                    div(class="col span_2_of_8" id="arr_left")
+                        p Arrival
+                    div(class="col span_6_of_8" id="arr_right")
+                        p= flight.arrivalDate + ", " + flight.arrivalTime
+                        p= flight.arrivalCity + " - " + flight.arrivalAirport + ", " + flight.arrivalCountry
+                a(href="/" style="float: left") Change flight
+                button(id="confirm" onClick="showSeatMap()" style="float: right") Confirm
+        div(class="col span_5_of_8" id="seatmap_container")
+            h1 Select your seat
+            form(class="col span_8_of_8" id="seat_selector" action="/seats" method="get")
+                div(id="seatmap")
+                    div(class="section group row icons")
+                        p.icon A 
+                        p.icon B 
+                        P.icon C 
+                        .gap 
+                        p.icon D 
+                        p.icon E 
+                        p.icon F
                     - rows = 0
                     while rows <= 30
                         - rows++
                         div(class="section group row")
-                            input.seat(type="checkbox" value= rows+"A")
-                            input.seat(type="checkbox" value= rows+"B")
-                            input.seat(type="checkbox" value= rows+"C")
+                            input.seat(id= rows+"A" type="checkbox" value= rows+"A")
+                            input.seat(id= rows+"B" type="checkbox" value= rows+"B")
+                            input.seat(id= rows+"C" type="checkbox" value= rows+"C")
                             .gap
-                            input.seat(type="checkbox" value= rows+"D")
-                            input.seat(type="checkbox" value= rows+"E")
-                            input.seat(type="checkbox" value= rows+"F")
-                input(type="hidden" name="seats" id="hidden_seats" value="0")
-                span#selected_seats
-                button(id="seat_submit" type="submit") Continue
+                            input.seat(id= rows+"D" type="checkbox" value= rows+"D")
+                            input.seat(id= rows+"E" type="checkbox" value= rows+"E")
+                            input.seat(id= rows+"F" type="checkbox" value= rows+"F")
+                div(class="hidden")
+                    input(type="hidden" name="seats" id="hidden_seats" value="0")
+                    input(type="hidden" name="flight_details" id="flight_details" value=flight.flightDetails)
+                    //- input(type="number" name="num_of_seats" id="num_of_seats" max="4" min="1" value="1")
+                div(class="section group" id="search_form_footer")
+                    div(class="col span_6_of_8" id="footer_text")
+                        p#seat_text You've selected:
+                            span#selected_seats
+                    div(class="col span_2_of_8" id="footer_button")
+                        button(id="seat_submit" type="submit") Continue
