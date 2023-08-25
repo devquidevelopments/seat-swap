@@ -84,11 +84,11 @@ h1 {
 	}
 
 	#flight_details_main>* {
-		width: 4em;
+		width: 3.75em;
 	}
 
 	#image_container {
-		width: 6em;
+		width: 4em;
 	}
 
 }
