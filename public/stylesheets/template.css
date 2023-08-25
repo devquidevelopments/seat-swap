@@ -1,137 +1,137 @@
 html {
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 body {
-    height: 100%;
-    background-color: black;
-    font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
-    margin: 0px;
+	height: 100%;
+	background-color: black;
+	font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin: 0px;
 }
 
 /*  SECTIONS  */
 .section {
-    clear: both;
-    padding: 0px;
-    margin: 0px;
+	clear: both;
+	padding: 0px;
+	margin: 0px;
 }
 
 /*  COLUMN SETUP  */
 .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	float: left;
 }
 
 .col:first-child {
-    margin-left: 0%;
+	margin-left: 0%;
 }
 
 /*  GROUPING  */
 .group:before,
 .group:after {
-    content: "";
-    display: table;
+	content: "";
+	display: table;
 }
 
 .group:after {
-    clear: both;
+	clear: both;
 }
 
 .group {
-    zoom: 1;
-    /* For IE 6/7 */
+	zoom: 1;
+	/* For IE 6/7 */
 }
 
 /*  GRID OF EIGHT  */
 .span_8_of_8 {
-    width: 100%;
+	width: 100%;
 }
 
 .span_7_of_8 {
-    width: 87.5%;
+	width: 87.5%;
 }
 
 .span_6_of_8 {
-    width: 75%;
+	width: 75%;
 }
 
 .span_5_of_8 {
-    width: 62.5%;
+	width: 62.5%;
 }
 
 .span_4_of_8 {
-    width: 50%;
+	width: 50%;
 }
 
 .span_3_of_8 {
-    width: 37.5%;
+	width: 37.5%;
 }
 
 .span_2_of_8 {
-    width: 25%;
+	width: 25%;
 }
 
 .span_1_of_8 {
-    width: 12.5%;
+	width: 12.5%;
 }
 
 .full {
-    height: 100%;
+	height: 100%;
 }
 
 .nav_buttons a {
-    float: right;
+	float: right;
 }
 
 #header_container {
-    height: 3.75em;
-    background-color: #008080;
-    list-style-type: none;
-    z-index: 0;
-    position: sticky;
+	height: 3.75em;
+	background-color: #008080;
+	list-style-type: none;
+	z-index: 0;
+	position: sticky;
 }
 
 #logo {
-    margin-left: 1.6%;
-    color: white;
-    font-size: large;
-    text-decoration: none;
+	margin-left: 1.6%;
+	color: white;
+	font-size: large;
+	text-decoration: none;
 }
 
 #main_container {
-    background-color: #008080;
-    height: calc(100% - 3.75em);
+	background-color: #008080;
+	height: calc(100% - 3.75em);
 }
 
 @media only screen and (max-width: 900px) {
 
-    #main_container {
-        background-color: white;
-    }
+	#main_container {
+		background-color: white;
+	}
 
 }
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 600px) {
 
-    .span_1_of_8,
-    .span_2_of_8,
-    .span_3_of_8,
-    .span_4_of_8,
-    .span_5_of_8,
-    .span_6_of_8,
-    .span_7_of_8,
-    .span_8_of_8 {
-        width: 100%;
-    }
+	.span_1_of_8,
+	.span_2_of_8,
+	.span_3_of_8,
+	.span_4_of_8,
+	.span_5_of_8,
+	.span_6_of_8,
+	.span_7_of_8,
+	.span_8_of_8 {
+		width: 100%;
+	}
 
-    .nav_buttons {
-        display: none;
-    }
+	.nav_buttons {
+		display: none;
+	}
 
 }
 

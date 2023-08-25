@@ -1,98 +1,94 @@
 h1 {
-    font-size: medium;
+	font-size: medium;
 }
 
 .inputs {
-    margin-top: 0.75em;
+	margin-top: 0.75em;
 }
 
 .input {
-    margin-right: 5%;
+	margin-right: 5%;
 }
 
 .right {
-    float: right;
+	float: right;
 }
 
 .center,
 .vert {
-    height: 100%;
-    margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 .vert {
-    margin: 0;
+	margin: 0;
 }
 
 .vert p,
 .center p {
-    margin: 0;
-    align-self: center;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+	margin: 0;
+	align-self: center;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
 }
 
 #search_flight_container {
-    background-color: white;
-    height: 7.5em;
+	background-color: white;
+	height: 7.5em;
 }
 
 #search_button {
-    float: right;
-}
-
-#flight_details_container {
-    visibility: hidden;
+	float: right;
 }
 
 #flight_details_main {
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-    height: 3.55em;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
+	height: 3.55em;
 }
 
 #line {
-    height: 1px;
-    background-color: black;
+	height: 1px;
+	background-color: black;
 }
 
 @media only screen and (max-width: 900px) {
 
-    .span_4_of_8 {
-        width: 100%;
-    }
+	.span_4_of_8 {
+		width: 100%;
+	}
 
-    #search_form_container {
-        display: none;
-    }
+	#search_form_container {
+		display: none;
+	}
 
-    #search_form_container,
-    #flight_details_container {
-        margin-top: 0.5em;
-    }
+	#search_form_container,
+	#flight_details_container {
+		margin-top: 0.5em;
+	}
 
-    #content_container {
-        height: calc(100% - 8em);
-    }
+	#content_container {
+		height: calc(100% - 8em);
+	}
 
 }
 
 @media only screen and (max-width: 600px) {
 
-    .input {
-        float: none;
-    }
+	.input {
+		float: none;
+	}
 
-    .right {
-        margin: 0;
-    }
+	.right {
+		margin: 0;
+	}
 
-    #flight_details_main>* {
-        width: 4em;
-    }
+	#flight_details_main>* {
+		width: 4em;
+	}
 
-    #image_container {
-        width: 6em;
-    }
+	#image_container {
+		width: 6em;
+	}
 
 }

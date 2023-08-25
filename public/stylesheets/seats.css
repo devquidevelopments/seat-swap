@@ -1,90 +1,130 @@
-body {
-    height: 100%;
-    /* background-image: url(/images/landingPlane.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-}
-
-h1 {
-    font-size: medium;
-}
-
-.center,
-.vert {
-    height: 100%;
-    margin: 0;
-    justify-items: center;
-}
-
-.vert {
-    margin: 0;
-}
-
-.vert p {
-    margin: 0;
-}
-
-.span_2_of_8 input {
-    width: 100%;
-}
-
-.input {
-    margin-right: 5%;
-}
-
-.seatmap_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.seatmap {
-    width: 24em;
-    height: 24em;
-    overflow-y: scroll;
-}
-
 .row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  text-align: center;
+  width: 3em;
+  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .seat {
-    appearance: none;
-    background-color: grey;
-    width: 3em;
-    height: 3em;
-    clip-path: polygon(30% 0, 30% 60%, 70% 60%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  appearance: none;
+  background-color: grey;
+  width: 3em;
+  height: 3em;
+  clip-path: polygon(30% 0, 30% 60%, 70% 60%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 
 .seat:checked {
-    background-color: black;
+  background-color: #008080;
 }
 
 .gap {
-    height: 3em;
-    width: 6em;
+  height: 3em;
+  width: 6em;
 }
 
-#search_button {
-    float: right;
+#content_container {
+  height: calc(100% - 7.5em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#left {
-    border-bottom: thin solid black;
-    width: 100%;
+#seatmap_container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
-#right {
-    align-self: end;
-    border-bottom: thin solid black;
-    width: 100%;
+#seatmap_container {
+  border-radius: 3em;
+  height: 40em;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#seatmap {
+  align-self: center;
+  height: 32em;
+  overflow-y: scroll;
+}
+
+#search_form_footer {
+  margin-top: 1.5em;
+}
+
+#seat_text {
+  margin: 0;
+  margin-left: 3em;
 }
 
 #seat_submit {
-    float: right;
-    margin-top: 0.5em;
-    margin-right: 0.5em;
+  float: right;
+  margin-right: 3em;
+  width: 7em;
+}
+
+@media only screen and (max-width: 900px) {
+
+  #popup_container {
+    justify-content: start;
+    align-items: center;
+  }
+
+  #popup_container,
+  #seatmap_container {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  #popup {
+    width: 75%;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  #popup {
+    width: 90%;
+  }
+
+  #dep_left,
+  #arr_left {
+    width: 25%;
+  }
+
+  #dep_right,
+  #arr_right {
+    width: 75%;
+  }
+
+  #footer_text {
+    width: 50%;
+    float: left;
+  }
+
+  #footer_button {
+    width: 50%;
+    align-items: end;
+  }
+
+  #seat_text {
+    margin-left: 1.75em;
+  }
+
+  #seat_submit {
+    margin-right: 2em;
+  }
+
 }

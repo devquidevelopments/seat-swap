@@ -1,136 +1,140 @@
 .row {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .icon {
-    text-align: center;
-    width: 3em;
-    margin-bottom: 0;
-    margin-block-end: 0;
+	text-align: center;
+	width: 3em;
+	margin-bottom: 0;
+	margin-block-end: 0;
 }
 
 .seat {
-    appearance: none;
-    background-color: grey;
-    width: 3em;
-    height: 3em;
-    clip-path: polygon(30% 0, 30% 60%, 70% 60%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+	appearance: none;
+	background-color: grey;
+	width: 3em;
+	height: 3em;
+	clip-path: polygon(30% 0, 30% 60%, 70% 60%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 
 .seat:checked {
-    background-color: #008080;
+	background-color: #008080;
 }
 
 .gap {
-    height: 3em;
-    width: 6em;
+	height: 3em;
+	width: 6em;
+}
+
+#flight_details_container {
+	visibility: hidden;
 }
 
 #content_container {
-    height: calc(100% - 7.5em);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	height: calc(100% - 7.5em);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #popup_container,
 #seatmap_container {
-    background-color: white;
-    display: flex;
-    justify-content: center;
+	background-color: white;
+	display: flex;
+	justify-content: center;
 }
 
 #popup_container {
-    border-radius: 3em;
-    padding: 1.5em 2.5em 1.5em 2.5em;
+	border-radius: 3em;
+	padding: 1.5em 2.5em 1.5em 2.5em;
 }
 
 #seatmap_container {
-    border-radius: 3em;
-    height: 40em;
-    align-self: center;
-    justify-self: center;
-    display: none;
-    flex-direction: column;
-    align-items: center;
+	border-radius: 3em;
+	height: 40em;
+	align-self: center;
+	justify-self: center;
+	display: none;
+	flex-direction: column;
+	align-items: center;
 }
 
 #seatmap {
-    align-self: center;
-    height: 32em;
-    overflow-y: scroll;
+	align-self: center;
+	height: 32em;
+	overflow-y: scroll;
 }
 
 #search_form_footer {
-    margin-top: 1.5em;
+	margin-top: 1.5em;
 }
 
 #seat_text {
-    margin: 0;
-    margin-left: 3em;
+	margin: 0;
+	margin-left: 3em;
 }
 
 #seat_submit {
-    float: right;
-    margin-right: 3em;
-    width: 7em;
+	float: right;
+	margin-right: 3em;
+	width: 7em;
 }
 
 @media only screen and (max-width: 900px) {
 
-    #popup_container {
-        justify-content: start;
-        align-items: center;
-    }
+	#popup_container {
+		justify-content: start;
+		align-items: center;
+	}
 
-    #popup_container,
-    #seatmap_container {
-        height: 100%;
-        width: 100%;
-        border-radius: 0;
-        padding: 0;
-    }
+	#popup_container,
+	#seatmap_container {
+		height: 100%;
+		width: 100%;
+		border-radius: 0;
+		padding: 0;
+	}
 
-    #popup {
-        width: 75%;
-    }
+	#popup {
+		width: 75%;
+	}
 
 }
 
 @media only screen and (max-width: 600px) {
 
-    #popup {
-        width: 90%;
-    }
+	#popup {
+		width: 90%;
+	}
 
-    #dep_left,
-    #arr_left {
-        width: 25%;
-    }
+	#dep_left,
+	#arr_left {
+		width: 25%;
+	}
 
-    #dep_right,
-    #arr_right {
-        width: 75%;
-    }
+	#dep_right,
+	#arr_right {
+		width: 75%;
+	}
 
-    #footer_text {
-        width: 50%;
-        float: left;
-    }
+	#footer_text {
+		width: 50%;
+		float: left;
+	}
 
-    #footer_button {
-        width: 50%;
-        align-items: end;
-    }
+	#footer_button {
+		width: 50%;
+		align-items: end;
+	}
 
-    #seat_text {
-        margin-left: 1.75em;
-    }
+	#seat_text {
+		margin-left: 1.75em;
+	}
 
-    #seat_submit {
-        margin-right: 2em;
-    }
+	#seat_submit {
+		margin-right: 2em;
+	}
 
 }

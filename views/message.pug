@@ -1,58 +1,13 @@
-extends template
+extends layout
 
-block head 
+block headitems
     link(rel='stylesheet' href='/stylesheets/message.css')
 
 block navitems
     a(href="/login") Login/Register
 
-block content
-    div(class="section group")
-        div(class="col span_4_of_8")
-            div(class="section group" id="search_box_container")
-                div(class="col span_8_of_8" id="search_form_main")
-                    form(id="search_form" action="/results" method="get")
-                        div(class="section group inputs" id="input1")
-                            div(class="col span_2_of_8")
-                                label Airline
-                            div(class="col span_2_of_8 input")
-                                input(list="airlines" id="airline" name="airline" placeholder="Select airline" autocomplete="off")
-                                datalist(id="airlines")
-                                    option(value="FR Ryanair")
-                                    option(value="TP TAP Portugal")
-                            div(class="col span_1_of_8")
-                                label Date
-                            div(class="col span_2_of_8 input")
-                                input#date(type="date" name="date" value=`${date}` min=`${date}`)
-                        div(class="section group inputs" id="input2")
-                            div(class="col span_2_of_8")
-                                label Flight number
-                            div(class="col span_2_of_8 input")
-                                input#number(type="text" name="fNumber" autocomplete="off")
-                            div(class="col span_2_of_8")
-                            div(class="col span_1_of_8")
-                                input#search_button(type="submit" value="Search")
-        div(class="col span_4_of_8")
-            div(class="section group" id="flight_header")
-                h1 Your flight details:
-            div(class="section group" id="flight_details")
-                div(class="col span_1_of_8 center")
-                    p#image= flight.airline
-                div(class="col span_1_of_8 vert")
-                    p#depT= flight.departureTime
-                    p#depAP= flight.departureAirport
-                div(class="col span_2_of_8")
-                    #left
-                div(class="col span_1_of_8 center")
-                    p#fNumber= flight.flightNumber
-                div(class="col span_2_of_8")
-                    #right
-                div(class="col span_1_of_8 vert")
-                    p#arrT= flight.arrivalTime
-                    p#arrAP= flight.arrivalAirport
-    div(class="section group")
-        div(class="col span_8_of_8")
-    div(class="section group")
+block maincontent
+    div(class="section group" id="content")
         div(class="col span_4_of_8 seatmap_container")
             form(id="seat_selector" action="/seats" method="get") 
                 div(class="seatmap")

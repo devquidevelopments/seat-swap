@@ -1,97 +1,97 @@
 .form {
-    margin-left: 2.5em;
-    margin-right: 2.5em;
-    margin-bottom: 2.5em;
+	margin-left: 2.5em;
+	margin-right: 2.5em;
+	margin-bottom: 2.5em;
 }
 
 .break {
-    margin-top: 1.5em;
+	margin-top: 1.5em;
 }
 
 #main_container {
-    background-color: rgb(207, 207, 207);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	background-color: rgb(207, 207, 207);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #search_box_container {
-    background-color: white;
-    border-radius: 3em;
+	background-color: white;
+	border-radius: 3em;
 }
 
 #search_box_container h1 {
-    margin-top: 2em;
-    margin-left: 2em;
-    font-size: larger;
+	margin-top: 2em;
+	margin-left: 2em;
+	font-size: larger;
 }
 
 #date {
-    margin-left: 1em;
+	margin-left: 1em;
 }
 
 #search_button {
-    align-self: end;
-    width: fit-content;
-    margin-right: 1.6%;
+	align-self: end;
+	width: fit-content;
+	margin-right: 1.6%;
 }
 
 @media only screen and (max-width: 800px) {
 
-    .break {
-        margin-top: 0;
-    }
+	.break {
+		margin-top: 0;
+	}
 
-    .break>.span_2_of_8 {
-        margin-top: 1.5em;
-        width: 50%;
-    }
+	.break>.span_2_of_8 {
+		margin-top: 1.5em;
+		width: 50%;
+	}
 
-    .break>.span_4_of_8 {
-        width: 100%;
-    }
+	.break>.span_4_of_8 {
+		width: 100%;
+	}
 
-    .form_label {
-        margin-left: 2.5em;
-    }
+	.form_label {
+		margin-left: 2.5em;
+	}
 
-    .form_input {
-        margin-right: 2.5em;
-    }
+	.form_input {
+		margin-right: 2.5em;
+	}
 
-    #search_box_container {
-        align-items: center;
-    }
+	#search_box_container {
+		align-items: center;
+	}
 
-    #search_box_container h1 {
-        margin-top: 1em;
-        margin-left: 0;
-        font-size: larger;
-    }
+	#search_box_container h1 {
+		margin-top: 1em;
+		margin-left: 0;
+		font-size: larger;
+	}
 
-    #date {
-        margin-left: 2.5em;
-    }
+	#date {
+		margin-left: 2.5em;
+	}
 
-    #search_button {
-        float: right;
-        margin-top: 1.5em;
-        margin-right: 2.5em;
-    }
+	#search_button {
+		float: right;
+		margin-top: 1.5em;
+		margin-right: 2.5em;
+	}
 
 }
 
 @media only screen and (max-width: 600px) {
 
-    #search_box_container {
-        border-radius: 0;
-        padding: 0;
-        align-items: center;
-    }
+	#search_box_container {
+		border-radius: 0;
+		padding: 0;
+		align-items: center;
+	}
 
-    #main_container {
-        background-color: white;
-    }
+	#main_container {
+		background-color: white;
+	}
 
 }
