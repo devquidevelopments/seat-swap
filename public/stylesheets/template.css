@@ -105,12 +105,16 @@ body {
     height: calc(100% - 3.75em);
 }
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 
-    body {
+    #main_container {
         background-color: white;
     }
+
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 600px) {
 
     .span_1_of_8,
     .span_2_of_8,
