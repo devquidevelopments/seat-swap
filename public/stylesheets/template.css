@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    height: 100%;
     background-color: black;
     font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
     margin: 0px;
@@ -131,7 +132,7 @@ body {
     .nav_buttons {
         display: none;
     }
-    
+
 }
 
 /*  MAINTAIN HEIGHT ABOVE 1300 PIXELS */
