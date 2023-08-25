@@ -1,12 +1,12 @@
 extends template
 
-block head 
+block head
     link(rel='stylesheet' href='/stylesheets/index.css')
 
-block navitems
+block nav
     a(href="/login") Login/Register
 
-block content
+block main
     div(class="col span_5_of_8" id="search_box_container")
         h1 Search for your flight
         form(class="section group form" id="search_form" action="/results" method="get")
