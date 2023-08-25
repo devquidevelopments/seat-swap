@@ -1,57 +1,101 @@
-html {
-    height: 100%;
-    overflow-y: hidden;
-}
-
 body {
     height: 100%;
-    background-image: url(/images/landingPlane.jpg);
+    /* background-image: url(/images/landingPlane.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
-#main {
-    height: 31.667%;
+.form {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    margin-bottom: 2.5em;
 }
 
-#margin_top {
-    height: 31.667%;
+.break {
+    margin-top: 1.5em;
 }
 
-#search_box {
-    height: 100%;
+#main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_box_container {
     background-color: white;
-    margin: 0;
     border-radius: 5em;
 }
 
-#search_box_header_container {
-    height: 25%;
-}
-
-#search_box h1 {
+#search_box_container h1 {
+    margin-top: 2em;
+    margin-left: 2em;
     font-size: larger;
 }
 
-#search_form_main {
-    margin-left: 0;
+#date {
+    margin-left: 1em;
 }
 
-#search_form input{
-    width: 100%;
+#search_button {
+    align-self: end;
+    width: fit-content;
+    margin-right: 1.6%;
 }
 
-@media only screen and (max-width: 480px) {
-    #search_box_header_container {
-        margin: 3% 7% 0 7%;
+@media only screen and (max-width: 800px) {
+
+    .break {
+        margin-top: 0;
     }
 
-    #search_box_main {
-        margin: 0 7% 0 7%;
+    .break>.span_2_of_8 {
+        margin-top: 1.5em;
+        width: 50%;
     }
 
-    .margin {
-        display: none;
+    .break>.span_4_of_8 {
+        width: 100%;
     }
+
+    .form_label {
+        margin-left: 2.5em;
+    }
+
+    .form_input {
+        margin-right: 2.5em;
+    }
+
+    #search_box_container {
+        align-items: center;
+    }
+
+    #search_box_container h1 {
+        margin-top: 1em;
+        margin-left: 0;
+        font-size: larger;
+    }
+
+    #date {
+        margin-left: 2.5em;
+    }
+
+    #search_button {
+        float: right;
+        margin-top: 1.5em;
+        margin-right: 2.5em;
+        margin-bottom: 2.5em;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    #search_box_container {
+        border-radius: 0;
+        padding: 0;
+        align-items: center;
+    }
+
 }
