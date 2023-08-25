@@ -25,7 +25,7 @@ body {
 
 #search_box_container {
     background-color: white;
-    border-radius: 5em;
+    border-radius: 3em;
 }
 
 #search_box_container h1 {
@@ -85,7 +85,6 @@ body {
         float: right;
         margin-top: 1.5em;
         margin-right: 2.5em;
-        margin-bottom: 2.5em;
     }
 
 }
