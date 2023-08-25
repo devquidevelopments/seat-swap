@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var amadeus = require('amadeus');
 
 // Modules
 var indexRouter = require('./routes/index');
@@ -12,7 +11,8 @@ var loginRouter = require('./routes/login');
 var resultsRouter = require('./routes/results');
 var usersRouter = require('./routes/users');
 var registerRouter = require('./routes/register');
-var flightRouter = require('./routes/flight');
+var seatsRouter = require('./routes/seats');
+var messageRouter = require('./routes/message');
 
 var app = express();
 
@@ -32,7 +32,8 @@ app.use('/results', resultsRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
-app.use('/flight', flightRouter);
+app.use('/seats', seatsRouter);
+app.use('/message', messageRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
