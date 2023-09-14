@@ -1,87 +1,79 @@
-body {
-    height: 100%;
-    /* background-image: url(/images/landingPlane.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-}
-
 h1 {
-    font-size: medium;
+	font-size: medium;
 }
 
 .center,
 .vert {
-    height: 100%;
-    margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 .vert {
-    margin: 0;
+	margin: 0;
 }
 
 .vert p,
 .center p {
-    margin: 0;
-    justify-self: center;
-    align-self: center;
-    justify-content: center;
-    align-content: center;
+	margin: 0;
+	justify-self: center;
+	align-self: center;
+	justify-content: center;
+	align-content: center;
 }
 
 .span_2_of_8 input {
-    width: 100%;
+	width: 100%;
 }
 
 .input {
-    margin-right: 5%;
+	margin-right: 5%;
 }
 
 .seatmap_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .seatmap {
-    width: 24em;
-    height: 24em;
-    overflow-y: scroll;
+	width: 24em;
+	height: 24em;
+	overflow-y: scroll;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .seat {
-    width: 3em;
-    height: 3em;
+	width: 3em;
+	height: 3em;
 }
 
 .gap {
-    height: 3em;
-    width: 6em;
+	height: 3em;
+	width: 6em;
 }
 
 #search_button {
-    float: right;
+	float: right;
 }
 
 #left {
-    border-bottom: thin solid black;
-    width: 100%;
+	border-bottom: thin solid black;
+	width: 100%;
 }
 
 #right {
-    align-self: end;
-    border-bottom: thin solid black;
-    width: 100%;
+	align-self: end;
+	border-bottom: thin solid black;
+	width: 100%;
 }
 
 #seat_submit {
-    float: right;
-    margin-top: 0.5em;
-    margin-right: 0.5em;
+	float: right;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
 }
