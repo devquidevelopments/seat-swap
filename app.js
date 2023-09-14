@@ -12,6 +12,7 @@ var amadeus = new Amadeus({
 });
 
 // Modules
+var landingRouter = require('./routes/landing');
 var indexRouter = require('./routes/index');
 var templateRouter = require('./routes/template')
 var loginRouter = require('./routes/login');
@@ -32,8 +33,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/template', templateRouter)
+app.use('/', landingRouter);
+app.use('/home', indexRouter);
+app.use('/template', templateRouter);
 app.use('/results', resultsRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
