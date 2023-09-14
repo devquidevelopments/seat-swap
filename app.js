@@ -14,7 +14,7 @@ var amadeus = new Amadeus({
 // Modules
 var landingRouter = require('./routes/landing');
 var indexRouter = require('./routes/index');
-var templateRouter = require('./routes/template')
+var templateRouter = require('./routes/template');
 var loginRouter = require('./routes/login');
 var resultsRouter = require('./routes/results');
 var registerRouter = require('./routes/register');
@@ -40,7 +40,7 @@ app.use('/results', resultsRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/seats', seatsRouter);
-app.use('/message', messageRouter)
+app.use('/message', messageRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
