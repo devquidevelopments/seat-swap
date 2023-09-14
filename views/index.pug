@@ -1,31 +1,31 @@
 extends template
 
 block head
-    link(rel='stylesheet' href='/stylesheets/index.css')
+	link(rel='stylesheet' href='/stylesheets/index.css')
 
 block nav
-    a(href="/login") Login/Register
+	a(href="/login") Login/Register
 
 block main
-    div(class="col span_5_of_8" id="search_box_container")
-        h1 Search for your flight
-        form(class="section group form" id="search_form" action="/results" method="get")
-            div(class="section group break")
-                div(class="col span_2_of_8")
-                    label.form_label Airline
-                div(class="col span_2_of_8")
-                    input.form_input(list="airlines" id="airline" name="airline" placeholder="Select airline" autocomplete="off")
-                    datalist(id="airlines")
-                        option(value="FR Ryanair")
-                        option(value="TP TAP Portugal")
-                div(class="col span_2_of_8")
-                    label.form_label#date Date
-                div(class="col span_2_of_8")
-                    input.form_input(id="date_input" type="date" name="date" value=`${date}` min=`${date}`)
-            div(class="section group break")
-                div(class="col span_2_of_8")
-                    label.form_label Flight number
-                div(class="col span_2_of_8")
-                    input.form_input(id="number" type="text" name="fNumber" autocomplete="off")
-                div(class="col span_4_of_8")
-                    input.form_input(id="search_button" type="submit" value="Search")
+	div(class="col span_5_of_8" id="search_box_container")
+		h1 Search for your flight
+		form(class="section group form" id="search_form" action="/results" method="get")
+			div(class="section group break")
+				div(class="col span_2_of_8")
+					label.form_label Airline
+				div(class="col span_2_of_8")
+					input.form_input(list="airlines" id="airline" name="airline" placeholder="Select airline" autocomplete="off")
+					datalist(id="airlines")
+						option(value="FR Ryanair")
+						option(value="TP TAP Portugal")
+				div(class="col span_2_of_8")
+					label.form_label#date Date
+				div(class="col span_2_of_8")
+					input.form_input(id="date_input" type="date" name="date" value=`${date}` min=`${date}`)
+			div(class="section group break")
+				div(class="col span_2_of_8")
+					label.form_label Flight number
+				div(class="col span_2_of_8")
+					input.form_input(id="number" type="text" name="fNumber" autocomplete="off")
+				div(class="col span_4_of_8")
+					input.form_input(id="search_button" type="submit" value="Search")
