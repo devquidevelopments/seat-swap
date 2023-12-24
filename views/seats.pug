@@ -1,44 +1,44 @@
 extends layout
 
 block headitems
-    link(rel='stylesheet' href='/stylesheets/seats.css')
-    script(src="/scripts/seats.js")
+  link(rel='stylesheet' href='/stylesheets/seats.css')
+  script(src="/scripts/seats.js")
 
 block navitems
-    a(href="/login") Login/Register
+  a(href="/login") Login/Register
 
 block maincontent
-    div(class="section group" id="content_container")
-        div(class="col span_5_of_8" id="seatmap_container")
-            h1 Select your seat
-            form(class="col span_8_of_8" id="seat_selector" action="/message" method="get")
-                div(id="seatmap")
-                    div(class="section group row icons")
-                        p.icon A 
-                        p.icon B 
-                        P.icon C 
-                        .gap 
-                        p.icon D 
-                        p.icon E 
-                        p.icon F
-                    - rows = 0
-                    while rows <= 30
-                        - rows++
-                        div(class="section group row")
-                            input.seat(id= rows+"A" type="checkbox" value= rows+"A")
-                            input.seat(id= rows+"B" type="checkbox" value= rows+"B")
-                            input.seat(id= rows+"C" type="checkbox" value= rows+"C")
-                            .gap
-                            input.seat(id= rows+"D" type="checkbox" value= rows+"D")
-                            input.seat(id= rows+"E" type="checkbox" value= rows+"E")
-                            input.seat(id= rows+"F" type="checkbox" value= rows+"F")
-                div(class="hidden")
-                    input(type="hidden" name="old_seat" id="old_seat" value= flight.selectedSeat)
-                    input(type="hidden" name="seats" id="hidden_seats" value="0")
-                    input(type="hidden" name="flight_details" id="flight_details" value=flight.flightDetails)
-                div(class="section group" id="search_form_footer")
-                    div(class="col span_6_of_8" id="footer_text")
-                        p#seat_text You've selected:
-                            span#selected_seats
-                    div(class="col span_2_of_8" id="footer_button")
-                        button(id="seat_submit" type="submit") Continue
+  div(class="section group" id="content_container")
+    div(class="col span_5_of_8" id="seatmap_container")
+      h1 Select your seat
+      form(class="col span_8_of_8" id="seat_selector" action="/message" method="get")
+        div(id="seatmap")
+          div(class="section group row icons")
+            p.icon A 
+            p.icon B 
+            P.icon C 
+            .gap 
+            p.icon D 
+            p.icon E 
+            p.icon F
+          - rows = 0
+          while rows <= 30
+            - rows++
+            div(class="section group row")
+              input.seat(id= rows+"A" type="checkbox" value= rows+"A")
+              input.seat(id= rows+"B" type="checkbox" value= rows+"B")
+              input.seat(id= rows+"C" type="checkbox" value= rows+"C")
+              .gap
+              input.seat(id= rows+"D" type="checkbox" value= rows+"D")
+              input.seat(id= rows+"E" type="checkbox" value= rows+"E")
+              input.seat(id= rows+"F" type="checkbox" value= rows+"F")
+        div(class="hidden")
+          input(type="hidden" name="old_seat" id="old_seat" value= flight.selectedSeat)
+          input(type="hidden" name="seats" id="hidden_seats" value="0")
+          input(type="hidden" name="flight_details" id="flight_details" value=flight.flightDetails)
+        div(class="section group" id="search_form_footer")
+          div(class="col span_6_of_8" id="footer_text")
+            p#seat_text You've selected:
+              span#selected_seats
+          div(class="col span_2_of_8" id="footer_button")
+            button(id="seat_submit" type="submit") Continue
