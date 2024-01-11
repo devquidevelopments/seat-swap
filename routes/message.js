@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var moment = require('moment');
-var Amadeus = require('amadeus')
+var Amadeus = require('amadeus');
 
 require('dotenv').config();
 
@@ -45,7 +45,7 @@ router.get('/', async (req, res, next) => {
 		var depTime = depInfo.departure.timings[0].value.split("T")[1].split("+")[0];
 		var depAP = depInfo.iataCode;
 		var arrInfo = data.flightPoints[1];
-		var arrTime = arrInfo.arrival.timings[0].value.split("T")[1].split("+")[0];
+		var arrTime = arrInfo.arrival.timings[0].value.split("T")[1].split("+")[0].slice(0, -1);
 		var arrAP = arrInfo.iataCode;
 		var number = [data.flightDesignator.carrierCode, data.flightDesignator.flightNumber].join("")
 		var flight = JSON.parse(

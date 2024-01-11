@@ -9,21 +9,29 @@ block navitems
 block maincontent
 	div(class="section group" id="content")
 		div(class="col span_4_of_8 seatmap_container")
-			form(id="seat_selector" action="/seats" method="get") 
-				div(class="seatmap")
-					- rows = 0
-					while rows <= 30
-						- rows++
-						div(class="section group row")
-							input.seat(id= rows+"A" type="checkbox" value= rows+"A")
-							input.seat(id= rows+"B" type="checkbox" value= rows+"B")
-							input.seat(id= rows+"C" type="checkbox" value= rows+"C")
-							.gap
-							input.seat(id= rows+"D" type="checkbox" value= rows+"D")
-							input.seat(id= rows+"E" type="checkbox" value= rows+"E")
-							input.seat(id= rows+"F" type="checkbox" value= rows+"F")
-				input(type="hidden" name="seats" id="hidden_seats" value="0")
-				input(type="hidden" name="flight_details" id="flight_details" value=flight.flightDetails)
-				//- input(type="number" name="num_of_seats" id="num_of_seats" max="4" min="1" value="1")
-				span#selected_seats
-			div(class="col span_4_of_8 message")
+			div(class="seatmap")
+				div(class="section group row icons")
+					p.icon A 
+					p.icon B 
+					P.icon C 
+					.gap 
+					p.icon D 
+					p.icon E 
+					p.icon F
+				- rows = 0
+				while rows <= 30
+					- rows++
+					div(class="section group row")
+						.seat(id= rows+"A")
+						.seat(id= rows+"B")
+						.seat(id= rows+"C")
+						.gap
+						.seat(id= rows+"D")
+						.seat(id= rows+"E")
+						.seat(id= rows+"F")
+			input(type="hidden" name="seats" id="hidden_seats" value="0")
+			input(type="hidden" name="flight_details" id="flight_details" value=flight.flightDetails)
+			//- input(type="number" name="num_of_seats" id="num_of_seats" max="4" min="1" value="1")
+			span#selected_seats
+		div(class="col span_4_of_8 message_container")
+			
