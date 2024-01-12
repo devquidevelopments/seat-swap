@@ -20,6 +20,7 @@ var resultsRouter = require('./routes/results');
 var registerRouter = require('./routes/register');
 var seatsRouter = require('./routes/seats');
 var messageRouter = require('./routes/message');
+var confirmRouter = require('./routes/confirm');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/seats', seatsRouter);
 app.use('/message', messageRouter);
+app.use('/confirm', confirmRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
