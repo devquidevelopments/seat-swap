@@ -32,8 +32,8 @@ block maincontent
 			input(type="hidden" name="flight_details" id="flight_details" value=flight.flightDetails)
 		div(class="col span_4_of_8 message_container")
 			h1 Request a seat swap
-			form(id="message_form" action="" method="post")
+			form(id="message_form")
 				label Message 
-				input.form_input(id="message" type="text" name="fNumber" autocomplete="off")
+				input.form_input(id="message" type="text" name="message" autocomplete="off")
 				p The user which has made this seat available will be notified of the swap and will be able to accept or reject your request.
 				input(id="search_button" type="submit" value="Send")
