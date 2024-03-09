@@ -20,7 +20,6 @@ const connectDb = async () => {
 			password: process.env.PGPASSWORD,
 			port: process.env.PGPORT
 		});
-
 		await client.connect();
 		const res = await client.query('SELECT * FROM some_table');
 		console.log(res);
